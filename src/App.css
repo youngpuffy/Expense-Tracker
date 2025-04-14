@@ -1,7 +1,87 @@
+/* App.css
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin-bottom: 5px;
+}
+
+.main-content {
+  display: flex;
+}
+
+.left-panel {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.right-panel {
+  flex: 2;
+}
+
+.expense-form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.expense-form h2 {
+  margin-bottom: 10px;
+}
+
+.expense-form input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.expense-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.search-bar {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+} */
 /* General body styling */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #9e8181;
   margin: 0;
   box-sizing: border-box;
   align-items: center;
@@ -13,18 +93,28 @@ h2 {
   margin-top: 20px;
   font-size: 2rem;
 }
-
-/* Expense Tracker Container */
+p{
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+  font-size: 2rem;
+}
  div{
-  width: 90%;
-  max-width: 900px; 
+  max-width: auto; 
   margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #e6d7d7;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px; */
+  border-radius: 8px; 
 }
-#table{
+#global {
+  display: flex;
+  padding: 30px;
+  border: 2px salmon;
+  background-color: #21883762;
+  gap: 9px; 
+}
+.left-panel{
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -34,21 +124,17 @@ h2 {
   border-radius: 8px;
   display: block;
 }
-#form{
-  max-width: 400px;
+.right-panel{
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0;
   background-color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  display: block;
 }
-#global {
-  display: flex;
-  padding: 30px;
-  border: 2px salmon;
-  background-color: #21883762;
-  gap: 9px; /* <-- this is the magic */
-}
+
 
 /* Search Bar */
 input[type="text"] {
@@ -125,23 +211,4 @@ td[colspan="3"] {
   font-size: 1.1rem;
   background-color: #f9f9f9;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  div {
-    padding: 15px;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  input[type="text"], form input, form button {
-    font-size: 0.9rem;
-  }
-}
-
-
-
-
-
+ 

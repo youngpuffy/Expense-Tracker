@@ -14,19 +14,20 @@ function ExpenseForm({onAddExpense}){
     [e.target.name]: e.target.value,
   })}
 
-  const handlesubmit =(e) =>{
+  const handleSubmit =(e) =>{
     e.preventDefault();
-    onAddExpense({...formData, amount: parseFloat(formData.amount)});
+    onAddExpense({...formData, amount: parseFloat(formData.amount),category:formData.category, date:formData.date});
     setFormData({description:'',category:'',amount:'',date:''})
   }
   return( 
     <div id="form">
-    <form onSubmit={handlesubmit}>
+      <h2>Add Expense</h2>
+    <form onSubmit={handleSubmit}>
      
       <input 
       type ="text"
       name='description'
-      placeholder='Description'
+      placeholder='Enter expense name'
       value={formData.description}
       onChange={handleChange}
       required
@@ -34,7 +35,7 @@ function ExpenseForm({onAddExpense}){
        <input 
       type ="text"
       name='category'
-      placeholder='Expense Category'
+      placeholder='Enter Category'
       value={formData.category}
       onChange={handleChange}
       required
@@ -42,7 +43,7 @@ function ExpenseForm({onAddExpense}){
       <input 
       type ="number"
       name='amount'
-      placeholder='Amount'
+      placeholder='Enter amount'
       value={formData.amount}
       onChange={handleChange}
       required
@@ -50,7 +51,7 @@ function ExpenseForm({onAddExpense}){
        <input 
       type ="date"
       name='date'
-      placeholder='Date'
+      placeholder='Enter date'
       value={formData.date}
       onChange={handleChange}
       required

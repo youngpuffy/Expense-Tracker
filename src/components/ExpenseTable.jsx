@@ -1,36 +1,33 @@
 import React from 'react';
 
-function ExpenseTable ({ expenses }) {
+function ExpenseTable ({ expenses, deleteExpense, sortExpenses }) {
   return(
-    <div id="table">
-    <table>
+     <table>
       <thead>
         <tr>
-          <th>Description</th>
-          <th>Category</th>
-          <th>Amount (ksh)</th>
-          <th>Date</th>
+         <th onClick={() => sortExpenses('description')}>Description</th>
+          <th onClick={() => sortExpenses('category')}>Category</th>
+          <th onClick={() => sortExpenses('amount')}>Amount (ksh)</th>
+          <th onClick={() => sortExpenses('date')}>Date</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        {expenses.length > 0?(
-          expenses.map((expense)=> (
+        {expenses.map((expense)=> (
             <tr key={expense.id}>
+              {/* <td>{expense.description.split ('')[0]}</td> */}
              <td>{expense.description}</td>
              <td>{expense.category}</td>
               <td>{expense.amount}</td>
               <td>{expense.date}</td>
-            </tr>
-          ))
-        ):(
-          <tr>
-            <td>No expense found</td>
+            <td>
+            <button onClick ={()=> deleteExpense(expense.id)}>Delete</button>
+            </td>
           </tr>
-        )}
+        ))}
         
       </tbody>
-    </table>
-    </div>
+     </table>
   )
 }
 export default ExpenseTable;
