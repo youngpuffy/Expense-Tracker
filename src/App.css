@@ -1,0 +1,147 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+/* Expense Tracker Container */
+ div{
+  width: 90%;
+  max-width: 900px; 
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; */
+}
+#table{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: block;
+}
+#form{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+#global {
+  display: flex;
+  padding: 30px;
+  border: 2px salmon;
+  background-color: #21883762;
+  gap: 9px; /* <-- this is the magic */
+}
+
+/* Search Bar */
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Form Input Fields */
+form input {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: normal;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* No expenses message */
+td[colspan="3"] {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-size: 1.1rem;
+  background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  div {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  input[type="text"], form input, form button {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
