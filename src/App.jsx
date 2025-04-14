@@ -3,6 +3,7 @@ import ExpenseForm from '../src/components/ExpenseForm.jsx';
 import ExpenseTable from '../src/components/ExpenseTable.jsx';
 import SearchBar from '../src/components/SearchBar.jsx';
 import './App.css'
+
 function App() {
     const [expenses, setExpenses] = useState([ { id: 3, description: 'Gas', amount: 30, category: 'Transportation', date:'2025-04-07' },]);
     const [searchTerm, setSearchTerm] = useState('')
