@@ -29,7 +29,7 @@ function App() {
     return (
         <>
             <div className='header'>
-            <h2>Expense Tracker</h2>
+            <h1>Expense Tracker</h1>
             <p>Effortlessly taking control of your financial life.</p>
             </div>
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
